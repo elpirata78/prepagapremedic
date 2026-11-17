@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prepaga Premedic: compará los planes 200, 300, 400 y 500 y elegí el tuyo</title>
+<meta name="description" content="La prepaga Premedic, plan por plan: 200, 300 sin coseguros, 400 con habitación individual y 500 con reintegros. Compará y cotizá por WhatsApp en minutos con una asesora. Agencia Comercial Oficial.">
+<link rel="canonical" href="https://prepagapremedic.com.ar/">
+<link rel="icon" type="image/png" href="logo-arbol.png">
+<link rel="apple-touch-icon" href="logo-arbol.png">
+<meta property="og:title" content="Prepaga Premedic: compará el 200, 300, 400 y 500 y elegí el tuyo">
+<meta property="og:description" content="Sin coseguros desde el plan 300, habitación individual en el 400, reintegros en el 500. Cotizá por WhatsApp en minutos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prepagapremedic.com.ar/">
+<meta property="og:locale" content="es_AR">
+<meta property="og:image" content="https://prepagapremedic.com.ar/v23072.jpg">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "Prepaga Premedic · Agencia Comercial Oficial de Grupo Premedic",
+  "url": "https://prepagapremedic.com.ar/",
+  "logo": "https://prepagapremedic.com.ar/logo-arbol.png",
+  "areaServed": ["CABA", "Buenos Aires", "Córdoba", "Tucumán", "Misiones", "Mendoza"],
+  "description": "Comparador de los planes 200, 300, 400 y 500 de la prepaga Premedic (Premedic Medicina Privada), con cotización por WhatsApp.",
+  "knowsAbout": ["medicina prepaga", "planes de salud", "cobertura médica"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Cuánto sale cada plan de Premedic?", "acceptedAnswer": {"@type": "Answer", "text": "El precio depende de las edades, del grupo familiar y de si tenés recibo de sueldo. Por eso cotizamos por WhatsApp: respondés dos preguntas y una asesora te pasa el valor exacto en minutos."}},
+    {"@type": "Question", "name": "¿Qué plan de Premedic no tiene coseguros?", "acceptedAnswer": {"@type": "Answer", "text": "Los planes 300, 400 y 500 no tienen coseguros en especialidades, estudios ni prácticas médicas. El 200 tiene coseguros, excepto en guardias y en consultas pediátricas, clínicas y de ginecología."}},
+    {"@type": "Question", "name": "¿Tengo credencial digital?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La app Premedic Móvil (iOS y Android) tiene la credencial virtual: te atendés en todos los prestadores sin tarjeta física, con cartilla, turnos y autorización de órdenes."}},
+    {"@type": "Question", "name": "¿Puedo usar mis aportes de obra social?", "acceptedAnswer": {"@type": "Answer", "text": "Si trabajás con recibo de sueldo podés asociarte con los aportes de tu recibo, sin pagar cuota mensual, para vos y tu grupo familiar. Sujeto a correcta desregulación de aportes, términos, condiciones y cupos."}},
+    {"@type": "Question", "name": "¿Cómo me afilio?", "acceptedAnswer": {"@type": "Answer", "text": "La afiliación es 100% online: el equipo comercial te asesora por WhatsApp y hace el trámite sin que vayas a una sucursal."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#ffffff;
+  --panel:#EAF7F6;
+  --panel2:#D9F1F0;
+  --ink:#077B7A;
+  --texto:#2F6D6B;
+  --accent:#10A6A4;
+  --verde:#6ABD6E;
+  --wa:#25D366;
+  --oscuro:#065B5A;
+  --oscuro-ink:#F2FAF9;
+  --r:16px;
+  --margin:24px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--texto);
+  font-family:'Satoshi',Arial,sans-serif;
+  font-size:clamp(1.0625rem,1rem + 0.25vw,1.1875rem);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+::selection{background:var(--accent);color:#fff}
+.disp{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:-0.02em;line-height:.9;text-transform:uppercase;color:var(--ink)}
+h2.disp{font-size:clamp(36px,4vw,60px);line-height:.92}
+
+/* ====== reveals ====== */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ====== botones ====== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;font-weight:700;font-size:17px;text-decoration:none;padding:14px 26px;min-height:48px;border:none;cursor:pointer;border-radius:15px;transition:transform .2s,background .2s}
+.btn:hover{background:var(--ink);transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#073B2A}
+.btn-wa:hover{background:#30e676;color:#073B2A}
+.btn-wa svg{width:22px;height:22px;flex-shrink:0}
+.ico-wa{fill:currentColor}
+
+/* FAB flotante */
+.fab{position:fixed;right:18px;bottom:18px;z-index:50;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(6,91,90,.25);transition:transform .2s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:34px;height:34px;fill:#fff}
+
+/* ====== nav ====== */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px var(--margin);max-width:1280px;margin:0 auto}
+.nav .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav .marca img{width:44px;height:44px}
+.nav .marca b{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;letter-spacing:.02em;text-transform:uppercase;line-height:1;color:var(--ink)}
+.nav .marca small{display:block;font-family:'Satoshi',sans-serif;font-weight:500;font-size:13px;letter-spacing:.06em;color:var(--texto);text-transform:none}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{text-decoration:none;font-size:16px;font-weight:500;color:var(--ink)}
+.nav ul a:hover{text-decoration:underline}
+
+/* ====== hero ====== */
+.hero{position:relative;min-height:92svh;display:flex;flex-direction:column;overflow:hidden;max-width:1280px;margin:0 auto}
+.hero h1{font-size:clamp(64px,10vw,168px);text-align:center;margin-top:3svh;position:relative;z-index:2}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln span{display:block;transform:translateY(110%);animation:rise .9s cubic-bezier(.16,.84,.26,1) forwards}
+.hero h1 .ln:nth-child(2) span{animation-delay:.11s}
+@keyframes rise{to{transform:none}}
+@media (prefers-reduced-motion:reduce){.hero h1 .ln span{transform:none;animation:none}}
+
+/* credencial 3D */
+.escena{position:relative;z-index:1;margin:-1vw auto 0;width:min(460px,86vw);perspective:1200px}
+.cred{position:relative;aspect-ratio:1.586;border-radius:18px;background:linear-gradient(135deg,#065B5A 0%,#077B7A 55%,#10A6A4 100%);box-shadow:0 30px 60px rgba(6,91,90,.35);transform-style:preserve-3d;will-change:transform;padding:7% 8%;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;color:#fff}
+.cred::after{content:"";position:absolute;inset:0;border-radius:18px;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.26) 48%,transparent 58%);background-size:260% 100%;background-position:var(--gx,80%) 0;pointer-events:none}
+.cred .arbol{position:absolute;right:-8%;bottom:-16%;width:58%;opacity:.16;pointer-events:none}
+.cred .arriba{display:flex;justify-content:space-between;align-items:flex-start}
+.cred .arriba .lg{display:flex;align-items:center;gap:10px}
+.cred .arriba .lg img{width:38px;height:38px}
+.cred .arriba .lg b{font-family:'Barlow Condensed',sans-serif;font-size:24px;letter-spacing:.04em;text-transform:uppercase}
+.cred .plan{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,30px);text-transform:uppercase;letter-spacing:.04em;color:#D9F1F0}
+.cred .chip{width:46px;height:34px;border-radius:7px;background:linear-gradient(145deg,#e8d48b,#c9a94f);box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18)}
+.cred .abajo small{display:block;font-size:13px;letter-spacing:.14em;color:#b9e3e1;text-transform:uppercase}
+.cred .abajo b{font-size:clamp(17px,2.4vw,21px);letter-spacing:.12em;font-weight:500}
+.cred .abajo .fila{display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px}
+.hero-base{position:absolute;left:var(--margin);right:var(--margin);bottom:30px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;z-index:2}
+.hero-base p{max-width:310px;font-size:17px}
+.hero-base .fact{text-align:right;max-width:280px;margin-right:78px;color:var(--ink);font-weight:500}
+
+/* ====== poster list de planes ====== */
+.planes{padding:80px 0;max-width:1120px;margin:0 auto}
+.planes h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.pl-item{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:0 20px;text-decoration:none}
+.pl-item .big{font-size:clamp(56px,9vw,140px);transition:color .2s,transform .3s}
+.pl-item .fact{font-size:17px;color:var(--texto);text-align:right;flex-shrink:0}
+.pl-item:hover .big{color:var(--verde);transform:translateX(10px)}
+
+/* ====== tabla comparativa ====== */
+.compara{padding:40px var(--margin) 90px;max-width:1280px;margin:0 auto}
+.compara h2{max-width:600px}
+.compara .nota{font-size:17px;max-width:52ch;margin:18px 0 42px}
+.tabla-wrap{overflow:hidden;border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{border:1px solid #BFE3E1;padding:14px 16px;text-align:left;vertical-align:top}
+thead th{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:700;background:var(--panel2);color:var(--ink)}
+thead th small{display:block;font-family:'Satoshi',sans-serif;font-weight:500;font-size:15px;color:var(--texto)}
+tbody th{font-weight:700;background:var(--panel);width:170px;color:var(--ink)}
+td b{color:var(--ink);font-weight:700}
+.tabla-movil{display:none}
+
+/* ====== fachadas ====== */
+.fachadas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 12px}
+.fachadas figure{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:var(--r)}
+.fachadas img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.fachadas figure:hover img{transform:scale(1.06)}
+.fachadas figcaption{position:absolute;left:0;bottom:0;background:var(--oscuro);color:var(--oscuro-ink);font-size:15px;padding:8px 14px;border-radius:0 var(--r) 0 0}
+.fachadas figcaption b{font-weight:700}
+.fachadas-nota{padding:14px 20px 0;font-size:15px;text-align:right}
+
+/* ====== todos incluyen (shape points) ====== */
+.incluye{display:grid;grid-template-columns:5fr 1fr 6fr;padding:90px 0;background:var(--panel);margin-top:90px}
+.incluye-ph{aspect-ratio:3/4.2;max-height:78svh;margin-left:-6%;border-radius:0 200px 200px 0;overflow:hidden}
+.incluye-ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.2s ease-out}
+.incluye.in .incluye-ph img{transform:scale(1)}
+.incluye-tx{padding-right:var(--margin)}
+.pts{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 40px;margin-top:56px}
+.pt .dot{display:inline-block;width:.7em;height:.7em;border-radius:40%/55%;background:var(--accent);margin-right:8px}
+.pts > :nth-child(3n+2) .dot{background:var(--verde)}
+.pts > :nth-child(3n) .dot{background:var(--ink)}
+.pt b{font-size:17px;font-weight:700;color:var(--ink)}
+.pt p{font-size:15px;margin-top:6px;line-height:1.45}
+
+/* ====== cómo funciona ====== */
+.como{padding:110px var(--margin);max-width:1280px;margin:0 auto}
+.como h2{max-width:420px}
+.como > p{max-width:42ch;font-size:17px;margin-top:16px}
+.como svg{width:100%;height:auto;margin-top:48px}
+.como-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:28px}
+.como-cols b{font-size:20px;font-weight:700;display:block;color:var(--ink)}
+.como-cols p{font-size:16px;margin-top:6px}
+
+/* ====== armador (live thing) ====== */
+.armador{background:var(--panel2);border-radius:var(--r);max-width:1232px;margin:0 auto;padding:84px 32px;display:grid;grid-template-columns:5fr 1fr 6fr;align-items:start}
+.armador .izq p{font-size:17px;max-width:34ch;margin-top:16px}
+.armador .izq .btn{margin-top:36px;font-size:19px;padding:18px 34px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.chips .et{font-size:15px;font-weight:700;width:100%;letter-spacing:.02em;color:var(--oscuro)}
+.chip{border:2px solid var(--ink);background:#fff;color:var(--ink);font-family:'Satoshi',sans-serif;font-size:17px;font-weight:500;padding:11px 18px;min-height:48px;cursor:pointer;border-radius:15px;transition:background .15s}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+
+/* ====== faq index cards ====== */
+.faq{padding:110px 0 130px}
+.faq h2{margin:0 auto 48px;max-width:860px;padding:0 var(--margin)}
+.cards{max-width:860px;margin:0 auto;padding:0 var(--margin)}
+.card{position:relative;padding-top:40px;margin-top:-16px}
+.card:first-child{margin-top:0}
+.card .tab{position:absolute;top:0;width:200px;height:40px;font-size:16px;font-weight:700;display:flex;align-items:center;padding:0 18px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 100%,0 100%);border-radius:15px 0 0 0}
+.card details{border-radius:0 var(--r) var(--r) var(--r)}
+.card summary{cursor:pointer;font-size:20px;font-weight:700;list-style:none;padding:22px 26px}
+.card summary::-webkit-details-marker{display:none}
+.card .resp{padding:0 26px 30px;max-width:50ch;font-size:17px}
+.card:nth-child(3n+1) .tab,.card:nth-child(3n+1) details{background:var(--panel)}
+.card:nth-child(3n+1) summary,.card:nth-child(3n+1) .tab{color:var(--ink)}
+.card:nth-child(3n+2) .tab,.card:nth-child(3n+2) details{background:var(--ink)}
+.card:nth-child(3n+2) summary,.card:nth-child(3n+2) .tab{color:#fff}
+.card:nth-child(3n+2) .resp{color:#D9F1F0}
+.card:nth-child(3n) .tab,.card:nth-child(3n) details{background:var(--oscuro)}
+.card:nth-child(3n) summary,.card:nth-child(3n) .tab{color:#fff}
+.card:nth-child(3n) .resp{color:#cfe8e6}
+.card:nth-child(2) .tab{left:150px}
+.card:nth-child(3) .tab{left:300px}
+.card:nth-child(4) .tab{left:450px}
+.card:nth-child(5) .tab{left:150px}
+
+/* ====== CTA banda ====== */
+.cta{display:block;background:var(--wa);color:#073B2A;min-height:60svh;position:relative;text-decoration:none;overflow:hidden;border-radius:var(--r);max-width:1232px;margin:0 auto}
+.cta p{position:absolute;top:28px;left:var(--margin);font-size:20px;max-width:40ch;font-weight:500}
+.cta .wa-badge{position:absolute;top:28px;right:var(--margin);width:56px;height:56px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center}
+.cta .wa-badge svg{width:32px;height:32px;fill:var(--wa)}
+.cta .palabra{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:clamp(130px,26vw,480px);line-height:.78;white-space:nowrap;color:#073B2A}
+.cta:hover{background:#073B2A}
+.cta:hover,.cta:hover .palabra{color:var(--wa)}
+.cta:hover .wa-badge{background:var(--wa)}
+.cta:hover .wa-badge svg{fill:#fff}
+
+/* ====== footer postal ====== */
+.foot{background:var(--oscuro);padding:90px var(--margin) 40px;margin-top:120px}
+.postal{max-width:1060px;margin:0 auto;background:#fff;color:var(--texto);position:relative;padding:56px 48px 48px;border-radius:0 0 var(--r) var(--r)}
+.postal::before{content:"";position:absolute;top:-26px;left:0;right:0;height:27px;background:radial-gradient(circle at 44px 27px,#fff 0 26px,transparent 27px);background-size:88px 27px;background-position:center top}
+.postal-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
+.postal h2{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:32px;line-height:.95;color:var(--ink)}
+.postal .msj{font-size:16px;margin-top:16px;max-width:38ch}
+.postal address{font-style:normal;display:grid;gap:12px;font-size:17px;align-content:start;padding-right:120px}
+.postal address a{color:var(--ink);font-weight:500;text-decoration-color:#9fd4d2}
+.estampilla{position:absolute;top:48px;right:48px;width:92px;background:var(--panel);padding:6px;border-radius:6px}
+.estampilla img{width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;background:var(--panel)}
+.imprenta{text-align:center;font-size:13px;margin-top:48px;max-width:72ch;margin-left:auto;margin-right:auto}
+.imprenta a{color:var(--texto)}
+
+/* ====== responsive ====== */
+@media (max-width:900px){
+  :root{--margin:16px}
+  .nav ul{display:none}
+  .nav .marca small{display:none}
+  .hero h1{font-size:16.5vw;margin-top:2svh}
+  .escena{width:84vw;margin-top:4vw}
+  .hero-base{position:static;flex-direction:column;align-items:flex-start;padding:30px var(--margin) 0}
+  .hero-base .fact{text-align:left;margin-right:0}
+  .pl-item{flex-direction:column;align-items:flex-start;gap:6px;padding:0 16px 22px}
+  .pl-item .big{font-size:14vw}
+  .pl-item .fact{text-align:left;font-size:15px}
+  .tabla-wrap{display:none}
+  .tabla-movil{display:grid;gap:12px}
+  .plan-cardm{background:var(--panel);padding:22px 20px;border-radius:var(--r)}
+  .plan-cardm h3{font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:700;text-transform:uppercase;color:var(--ink)}
+  .plan-cardm h3 span{font-family:'Satoshi',sans-serif;font-size:15px;font-weight:500;color:var(--texto);text-transform:none;margin-left:10px;letter-spacing:0}
+  .plan-cardm ul{list-style:none;margin-top:12px;display:grid;gap:8px;font-size:16px}
+  .plan-cardm li b{color:var(--ink);font-weight:700}
+  .fachadas{grid-template-columns:1fr;gap:8px}
+  .incluye{display:block;padding:70px 0}
+  .incluye-ph{width:82vw;max-height:60svh;margin-left:0;border-radius:0 160px 160px 0}
+  .incluye-tx{padding:36px var(--margin) 0}
+  .pts{grid-template-columns:1fr;gap:28px}
+  .como-cols{grid-template-columns:1fr}
+  .armador{display:block;margin:0 12px;padding:60px 20px}
+  .armador .der{margin-top:32px}
+  .card:nth-child(n) .tab{left:0;width:130px}
+  .card:nth-child(2) .tab{left:48px}
+  .card:nth-child(3) .tab{left:96px}
+  .card:nth-child(4) .tab{left:48px}
+  .card:nth-child(5) .tab{left:96px}
+  .cta{min-height:46svh;margin:0 12px}
+  .cta .palabra{font-size:23vw}
+  .cta p{font-size:17px;max-width:24ch}
+  .cta .wa-badge{width:44px;height:44px}
+  .cta .wa-badge svg{width:26px;height:26px}
+  .foot{margin-top:84px}
+  .postal{padding:40px 22px}
+  .postal-grid{grid-template-columns:1fr}
+  .postal address{padding-right:0}
+  .estampilla{top:22px;right:22px;width:66px}
+  .fab{width:56px;height:56px}
+}
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true"><defs><symbol id="wa" viewBox="0 0 32 32"><path d="M16 2.7C8.7 2.7 2.8 8.6 2.8 15.9c0 2.5.7 4.9 2 7L2.7 29.3l6.6-2c2 1.1 4.3 1.7 6.7 1.7 7.3 0 13.2-5.9 13.2-13.2S23.3 2.7 16 2.7zm0 24c-2.2 0-4.3-.6-6.1-1.7l-.4-.3-3.9 1.2 1.2-3.8-.3-.4c-1.2-1.9-1.9-4.1-1.9-6.3C4.6 9.6 9.7 4.5 16 4.5s11.4 5.1 11.4 11.4S22.3 26.7 16 26.7zm6.3-8.5c-.3-.2-2-1-2.4-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.4-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2.1-.4 0-.6-.1-.2-.8-1.9-1-2.6-.3-.6-.6-.5-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></symbol></defs></svg>
+
+<header class="nav">
+  <a class="marca" href="#">
+    <img src="logo-arbol.png" alt="Logo de Premedic" width="44" height="44">
+    <span><b>Premedic</b><small>Agencia Comercial Oficial</small></span>
+  </a>
+  <ul>
+    <li><a href="#planes">Planes</a></li>
+    <li><a href="#comparar">Compará</a></li>
+    <li><a href="#preguntas">Preguntas</a></li>
+  </ul>
+  <a class="btn btn-wa" href="https://wa.me/5491126190219?text=Hola!%20Quiero%20cotizar%20un%20plan%20de%20Premedic"><svg class="ico-wa"><use href="#wa"/></svg>Cotizar</a>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <h1 class="disp"><span class="ln"><span>Elegí tu plan</span></span><span class="ln"><span>sin vueltas</span></span></h1>
+  <div class="escena">
+    <div class="cred" id="cred" aria-label="Credencial virtual de Premedic (ilustrativa)">
+      <div class="arriba">
+        <span class="lg"><img src="logo-arbol.png" alt="" width="38" height="38"><b>Premedic</b></span>
+        <span class="plan">Plan 300</span>
+      </div>
+      <div class="abajo">
+        <div class="chip" aria-hidden="true"></div>
+        <div class="fila">
+          <span><small>Afiliado/a</small><b>TU NOMBRE</b></span>
+          <span style="text-align:right"><small>Credencial</small><b>VIRTUAL</b></span>
+        </div>
+      </div>
+      <img class="arbol" src="logo-arbol.png" alt="" aria-hidden="true">
+    </div>
+  </div>
+  <div class="hero-base">
+    <p>Compará los planes 200, 300, 400 y 500 de Premedic Medicina Privada y cotizá por WhatsApp con una asesora. Sin formularios.</p>
+    <p class="fact">Más de 400 centros médicos y cartilla en cinco provincias.</p>
+  </div>
+</section>
+
+<!-- ============ PLANES POSTER ============ -->
+<section class="planes" id="planes" aria-label="Los planes">
+  <h2>Los planes de Premedic</h2>
+  <a class="pl-item rv" href="https://wa.me/5491126190219?text=Hola!%20Quiero%20cotizar%20el%20plan%20200%20de%20Premedic"><span class="big disp">Plan 200</span><span class="fact">el equilibrio justo</span></a>
+  <a class="pl-item rv" href="https://wa.me/5491126190219?text=Hola!%20Quiero%20cotizar%20el%20plan%20300%20de%20Premedic"><span class="big disp">Plan 300</span><span class="fact">sin coseguros</span></a>
+  <a class="pl-item rv" href="https://wa.me/5491126190219?text=Hola!%20Quiero%20cotizar%20el%20plan%20400%20de%20Premedic"><span class="big disp">Plan 400</span><span class="fact">habitación individual</span></a>
+  <a class="pl-item rv" href="https://wa.me/5491126190219?text=Hola!%20Quiero%20cotizar%20el%20plan%20500%20de%20Premedic"><span class="big disp">Plan 500</span><span class="fact">con reintegros</span></a>
+  <a class="pl-item rv" href="https://wa.me/5491126190219?text=Hola!%20Tengo%20recibo%20de%20sueldo%20y%20quiero%20saber%20si%20puedo%20usar%20mis%20aportes"><span class="big disp">Aportes</span><span class="fact">con tu recibo, sin cuota*</span></a>
+</section>
+
+<!-- ============ COMPARADOR ============ -->
+<section class="compara" id="comparar">
+  <h2 class="disp rv">Mirálos lado a lado</h2>
+  <p class="nota rv">Lo esencial de cada plan, sin letra chica escondida. El precio exacto depende de tu edad y tu grupo: eso te lo pasa la asesora por WhatsApp.</p>
+  <div class="tabla-wrap rv">
+  <table>
+    <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Comparación de los planes 200, 300, 400 y 500 de Premedic</caption>
+    <thead>
+      <tr>
+        <th scope="col" style="background:transparent;border-color:transparent"></th>
+        <th scope="col">200<small>equilibrio</small></th>
+        <th scope="col">300<small>sin coseguros</small></th>
+        <th scope="col">400<small>familia</small></th>
+        <th scope="col">500<small>el más completo</small></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Coseguros</th>
+        <td>Sí, salvo guardias, pediatría, clínica y ginecología</td>
+        <td><b>No, en nada</b></td>
+        <td><b>No, en nada</b></td>
+        <td><b>No, en nada</b></td>
+      </tr>
+      <tr>
+        <th scope="row">Internación</th>
+        <td>Habitación compartida</td>
+        <td>Habitación compartida</td>
+        <td><b>Habitación individual</b></td>
+        <td><b>Habitación individual</b></td>
+      </tr>
+      <tr>
+        <th scope="row">Red</th>
+        <td>+90 clínicas y sanatorios, +2.500 profesionales</td>
+        <td>+100 clínicas y sanatorios; suma Trinidad, Finochietto, CEMIC</td>
+        <td>+5.000 prestadores de acceso directo; suma Británico, Alemán, ICBA</td>
+        <td>Acceso preferencial a sanatorios y centros médicos</td>
+      </tr>
+      <tr>
+        <th scope="row">Reintegros</th>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td><b>Incluye reintegros</b></td>
+      </tr>
+      <tr>
+        <th scope="row">Odontología</th>
+        <td>Smile Group con copagos preferenciales</td>
+        <td>Arreglos, conducto y extracciones sin copago</td>
+        <td>Arreglos, conducto y extracciones sin copago</td>
+        <td>Lo del 400 + blanqueamiento sin copago</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tabla-movil rv" aria-label="Comparación de planes">
+    <div class="plan-cardm"><h3>200<span>equilibrio</span></h3><ul><li>Coseguros, salvo guardias, pediatría, clínica y ginecología</li><li>Habitación compartida</li><li>+90 clínicas, +2.500 profesionales</li><li>Smile Group con copagos preferenciales</li></ul></div>
+    <div class="plan-cardm"><h3>300<span>sin coseguros</span></h3><ul><li><b>Sin coseguros en nada</b></li><li>Habitación compartida</li><li>+100 clínicas; suma Trinidad, Finochietto, CEMIC</li><li>Arreglos, conducto y extracciones sin copago</li></ul></div>
+    <div class="plan-cardm"><h3>400<span>familia</span></h3><ul><li><b>Sin coseguros en nada</b></li><li><b>Habitación individual</b></li><li>+5.000 prestadores; suma Británico, Alemán, ICBA</li><li>Arreglos, conducto y extracciones sin copago</li></ul></div>
+    <div class="plan-cardm"><h3>500<span>el más completo</span></h3><ul><li><b>Sin coseguros en nada</b></li><li><b>Habitación individual y reintegros</b></li><li>Acceso preferencial a sanatorios y centros</li><li>Lo del 400 + blanqueamiento sin copago</li></ul></div>
+  </div>
+</section>
+
+<!-- ============ FACHADAS ============ -->
+<section aria-label="Prestadores destacados" class="compara" style="padding-top:0;padding-bottom:0">
+  <h2 class="disp rv" style="margin-bottom:28px">La cartilla, de frente</h2>
+  <div class="fachadas" style="padding:0">
+    <figure class="rv"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Hospital_Brit%C3%A1nico_Central_%28fachada%29.jpg/1280px-Hospital_Brit%C3%A1nico_Central_%28fachada%29.jpg" width="1280" height="853" alt="Fachada del Hospital Británico de Buenos Aires" loading="lazy"><figcaption><b>Hospital Británico</b> · lo suma el plan 400</figcaption></figure>
+    <figure class="rv"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cemic_-_Sede_Saavedra.jpg/1280px-Cemic_-_Sede_Saavedra.jpg" width="1280" height="945" alt="Sede Saavedra de CEMIC" loading="lazy"><figcaption><b>CEMIC</b> · lo suma el plan 300</figcaption></figure>
+    <figure class="rv"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/HospitalAleman.jpg/1280px-HospitalAleman.jpg" width="1280" height="960" alt="Fachada del Hospital Alemán de Buenos Aires" loading="lazy"><figcaption><b>Hospital Alemán</b> · lo suma el plan 400</figcaption></figure>
+  </div>
+  <p class="fachadas-nota">Prestadores destacados de la cartilla, según plan. La cartilla completa te la pasa la asesora.</p>
+</section>
+
+<!-- ============ TODOS INCLUYEN ============ -->
+<section class="incluye rv-raw" id="incluye">
+  <div class="incluye-ph rv">
+    <img src="v23072.jpg" width="640" height="360" alt="Familia jugando con su perro en el jardín" loading="lazy" style="object-position:38% center">
+  </div>
+  <div></div>
+  <div class="incluye-tx">
+    <h2 class="disp rv">Todos los planes incluyen</h2>
+    <div class="pts">
+      <div class="pt rv"><b><span class="dot"></span>Médico 24 h</b><p>Videollamada a cualquier hora, sin cargo, con las órdenes al celular.</p></div>
+      <div class="pt rv"><b><span class="dot"></span>Credencial virtual</b><p>En la app Premedic Móvil: sin tarjeta física, con turnos y autorizaciones.</p></div>
+      <div class="pt rv"><b><span class="dot"></span>40% en medicamentos</b><p>Recetados, y 100% en pastillas anticonceptivas según res. 310/04.</p></div>
+      <div class="pt rv"><b><span class="dot"></span>Centros propios</b><p>Consultas sin coseguro en los Premedic Medical Center de todos los planes.</p></div>
+      <div class="pt rv"><b><span class="dot"></span>Amar Mascotas</b><p>Veterinaria a domicilio y online para perros y gatos, sin costo adicional.</p></div>
+      <div class="pt rv"><b><span class="dot"></span>Vacunación en casa</b><p>Vacunas a domicilio sin cargo.</p></div>
+      <div class="pt rv"><b><span class="dot"></span>Ópticas en 48 h</b><p>Más de 160 ópticas en cartilla; en los PMC, anteojos listos en 48 horas.</p></div>
+      <div class="pt rv"><b><span class="dot"></span>Asistencia al viajero</b><p>Cardinal Assistance en el país y países limítrofes.</p></div>
+      <div class="pt rv"><b><span class="dot"></span>Afiliación online</b><p>El trámite completo sin pisar una sucursal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section class="como">
+  <h2 class="disp rv">De la duda al plan</h2>
+  <p class="rv">Tres pasos, un chat. Del lío de opciones a tu cobertura elegida.</p>
+  <svg viewBox="0 0 1200 260" aria-hidden="true" id="flujo">
+    <g id="zona-a" fill="#9fd4d2"></g>
+    <g id="zona-b" fill="#6ABD6E"></g>
+    <g id="zona-c" fill="#077B7A"></g>
+  </svg>
+  <div class="como-cols">
+    <div class="rv"><b>Contanos</b><p>Quiénes se afilian, sus edades y tu zona. Dos mensajes, no un formulario.</p></div>
+    <div class="rv"><b>Cotizamos</b><p>La asesora arma el precio de cada plan para tu grupo y te lo manda al chat.</p></div>
+    <div class="rv"><b>Elegís</b><p>Afiliación 100% online, y la cobertura queda andando.</p></div>
+  </div>
+</section>
+
+<!-- ============ ARMADOR (live) ============ -->
+<section class="armador" id="armador">
+  <div class="izq rv">
+    <h2 class="disp">Armá tu consulta</h2>
+    <p>Tocá lo que corresponda y abrimos el chat con tu consulta ya escrita. La respuesta llega en minutos.</p>
+    <a class="btn btn-wa" id="btn-armado" href="https://wa.me/5491126190219?text=Hola!%20Quiero%20cotizar%20un%20plan%20de%20Premedic"><svg class="ico-wa"><use href="#wa"/></svg>Cotizar esto por WhatsApp</a>
+  </div>
+  <div></div>
+  <div class="der rv">
+    <div class="chips" id="chips-grupo" role="group" aria-label="Quiénes se afilian">
+      <span class="et">¿Quiénes se afilian?</span>
+      <button class="chip" aria-pressed="true" data-v="yo solo/a">Yo</button>
+      <button class="chip" aria-pressed="false" data-v="en pareja">En pareja</button>
+      <button class="chip" aria-pressed="false" data-v="con hijos">Con hijos</button>
+      <button class="chip" aria-pressed="false" data-v="familia numerosa">Familia numerosa</button>
+    </div>
+    <div class="chips" id="chips-recibo" role="group" aria-label="Situación laboral">
+      <span class="et">¿Cobrás con recibo de sueldo?</span>
+      <button class="chip" aria-pressed="false" data-v="con recibo de sueldo">Sí</button>
+      <button class="chip" aria-pressed="false" data-v="sin recibo (independiente/monotributo)">No</button>
+    </div>
+    <div class="chips" id="chips-zona" role="group" aria-label="Zona">
+      <span class="et">¿Tu zona?</span>
+      <button class="chip" aria-pressed="false" data-v="CABA">CABA</button>
+      <button class="chip" aria-pressed="false" data-v="GBA / prov. de Buenos Aires">Buenos Aires</button>
+      <button class="chip" aria-pressed="false" data-v="Córdoba">Córdoba</button>
+      <button class="chip" aria-pressed="false" data-v="Tucumán">Tucumán</button>
+      <button class="chip" aria-pressed="false" data-v="Misiones">Misiones</button>
+      <button class="chip" aria-pressed="false" data-v="Mendoza">Mendoza</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="preguntas">
+  <h2 class="disp rv">Lo que todos preguntan</h2>
+  <div class="cards">
+    <div class="card rv"><span class="tab">Precio</span><details open><summary>¿Cuánto sale cada plan?</summary><p class="resp">Depende de las edades y del grupo familiar, y de si tenés recibo de sueldo. Por eso cotizamos por WhatsApp: en minutos tenés el valor exacto para tu caso, con las promos vigentes.</p></details></div>
+    <div class="card rv"><span class="tab">Coseguros</span><details><summary>¿Qué plan no tiene coseguros?</summary><p class="resp">El 300, el 400 y el 500: nada de bonos ni coseguros en especialidades, estudios y prácticas. El 200 tiene coseguros, salvo guardias y consultas de pediatría, clínica y ginecología.</p></details></div>
+    <div class="card rv"><span class="tab">Aportes</span><details><summary>¿Puedo usar mis aportes?</summary><p class="resp">Si cobrás con recibo de sueldo, podés asociarte usando los aportes de tu obra social, sin pagar cuota, para vos y tu familia. Sujeto a correcta desregulación, condiciones y cupos.</p></details></div>
+    <div class="card rv"><span class="tab">Credencial</span><details><summary>¿Tengo credencial digital?</summary><p class="resp">Sí: la app Premedic Móvil tiene la credencial virtual, la cartilla, los turnos y la autorización de órdenes con seguimiento. No hace falta tarjeta física.</p></details></div>
+    <div class="card rv"><span class="tab">Trámite</span><details><summary>¿Cómo me afilio?</summary><p class="resp">100% online: la asesora te acompaña por el mismo chat y el equipo hace el trámite. No vas a ninguna sucursal.</p></details></div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<a class="cta" href="https://wa.me/5491126190219?text=Hola!%20Quiero%20cotizar%20un%20plan%20de%20Premedic" aria-label="Cotizá por WhatsApp">
+  <p>Se abre WhatsApp con Alejandra, nuestra asesora. Respondés dos preguntas y tenés tu precio.</p>
+  <span class="wa-badge" aria-hidden="true"><svg><use href="#wa"/></svg></span>
+  <span class="palabra disp">Cotizá</span>
+</a>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="postal">
+    <div class="postal-grid">
+      <div>
+        <h2>Nos vemos en el chat</h2>
+        <p class="msj">Somos la agencia comercial oficial de Grupo Premedic. Te asesoramos, cotizamos y hacemos el trámite por WhatsApp, de punta a punta.</p>
+      </div>
+      <address>
+        <a href="https://wa.me/5491126190219">WhatsApp +54 9 11 2619-0219</a>
+        <a href="https://planespremedic.com.ar">planespremedic.com.ar</a>
+        <span>CABA · Buenos Aires · Córdoba · Tucumán · Misiones · Mendoza</span>
+      </address>
+    </div>
+    <div class="estampilla"><img src="logo-arbol.png" alt="Logo árbol de Premedic" loading="lazy"></div>
+    <p class="imprenta">© 2026 Agencia Comercial Oficial Premedic · Superintendencia de Servicios de Salud 0800-222-SALUD (72583) · RNEMP Nº 112172<br>*Plan Aportes: sujeto a correcta desregulación de aportes, términos, condiciones y cupos.<br>Fotos de fachadas: Hospital Británico (CC BY 3.0); Hospital Alemán por Nicolasrnphoto (CC BY-SA 4.0); CEMIC Saavedra por Madamebiblio (CC BY-SA 4.0) — <a href="https://commons.wikimedia.org/">vía Wikimedia Commons</a>.</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5491126190219?text=Hola!%20Quiero%20cotizar%20un%20plan%20de%20Premedic" aria-label="Escribinos por WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+// Reveals
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv,.incluye').forEach(el=>io.observe(el));
+
+// Credencial 3D: tilt con mouse en desktop, vaivén suave siempre
+(function(){
+  const c=document.getElementById('cred');if(!c)return;
+  const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let tx=0,ty=0,cx=0,cy=0,auto=true,t0=performance.now();
+  function frame(t){
+    if(auto&&!rm){const s=(t-t0)/1000;tx=Math.sin(s*.6)*7;ty=Math.cos(s*.45)*5;}
+    cx+=(tx-cx)*.07;cy+=(ty-cy)*.07;
+    c.style.transform=`rotateY(${cx}deg) rotateX(${-cy}deg)`;
+    c.style.setProperty('--gx',(50+cx*4)+'%');
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+  if(matchMedia('(pointer:fine)').matches){
+    const esc=c.parentElement;
+    esc.addEventListener('mousemove',e=>{const r=esc.getBoundingClientRect();
+      auto=false;tx=((e.clientX-r.left)/r.width-.5)*24;ty=((e.clientY-r.top)/r.height-.5)*18;});
+    esc.addEventListener('mouseleave',()=>{auto=true;t0=performance.now()});
+  }
+})();
+
+// Diagrama: muchos cuadraditos -> cinta -> orden
+(function(){
+  const S=12, za=document.getElementById('zona-a'),zb=document.getElementById('zona-b'),zc=document.getElementById('zona-c');
+  let seed=42; const rnd=()=> (seed=(seed*16807)%2147483647)/2147483647;
+  for(let i=0;i<50;i++){const r=document.createElementNS('http://www.w3.org/2000/svg','rect');
+    const x=20+rnd()*330,y=16+rnd()*210;
+    r.setAttribute('x',x);r.setAttribute('y',y);r.setAttribute('width',S);r.setAttribute('height',S);
+    r.setAttribute('transform',`rotate(${(rnd()*50-25).toFixed(0)} ${x+6} ${y+6})`);
+    za.appendChild(r);}
+  for(let c=0;c<16;c++)for(let f=0;f<3;f++){const r=document.createElementNS('http://www.w3.org/2000/svg','rect');
+    r.setAttribute('x',430+c*16);r.setAttribute('y',106+f*16);r.setAttribute('width',S);r.setAttribute('height',S);zb.appendChild(r);}
+  for(let c=0;c<10;c++)for(let f=0;f<5;f++){const r=document.createElementNS('http://www.w3.org/2000/svg','rect');
+    r.setAttribute('x',760+c*24);r.setAttribute('y',40+f*24);r.setAttribute('width',S);r.setAttribute('height',S);zc.appendChild(r);}
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    let t=0;setInterval(()=>{t++;zb.setAttribute('opacity',0.75+0.25*Math.sin(t/6))},80);}
+})();
+
+// Armador de consulta (live thing)
+(function(){
+  const grupos={'chips-grupo':'yo solo/a','chips-recibo':null,'chips-zona':null};
+  const btn=document.getElementById('btn-armado');
+  function arma(){
+    let partes=[];
+    if(grupos['chips-grupo'])partes.push('somos: '+grupos['chips-grupo']);
+    if(grupos['chips-recibo'])partes.push(grupos['chips-recibo']);
+    if(grupos['chips-zona'])partes.push('zona: '+grupos['chips-zona']);
+    const txt='Hola! Quiero cotizar un plan de Premedic'+(partes.length?' ('+partes.join(', ')+')':'');
+    btn.href='https://wa.me/5491126190219?text='+encodeURIComponent(txt);
+  }
+  Object.keys(grupos).forEach(id=>{
+    const cont=document.getElementById(id);
+    cont.addEventListener('click',ev=>{
+      const b=ev.target.closest('.chip');if(!b)return;
+      cont.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed','false'));
+      b.setAttribute('aria-pressed','true');
+      grupos[id]=b.dataset.v;arma();
+    });
+  });
+})();
+
+// FAQ: una carta abierta a la vez
+document.querySelectorAll('.card details').forEach(d=>{
+  d.addEventListener('toggle',()=>{ if(d.open) document.querySelectorAll('.card details').forEach(o=>{if(o!==d)o.open=false;});});
+});
+</script>
+</body>
+</html>
